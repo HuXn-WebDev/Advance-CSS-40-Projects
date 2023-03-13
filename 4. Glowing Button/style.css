@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+button {
+  position: relative;
+  padding: 1.2rem 4rem;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  z-index: 1;
+  border-color: transparent;
+  background: linear-gradient(
+    90deg,
+    #f9d923,
+    #00a19d,
+    #0c87b7,
+    #cb49ff,
+    #ff6666,
+    #f9d923
+  );
+  background-size: 400%;
+  box-shadow: 0 0 15px rgb(2, 4, 24);
+  animation: glow 12s linear forwards;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  background: inherit;
+  filter: blur(36px);
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+button:hover::before {
+  opacity: 1;
+  z-index: -1;
+}
+
+@keyframes glow {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 400%;
+  }
+}
