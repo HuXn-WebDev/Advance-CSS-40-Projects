@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heart {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #f00;
+  transform: rotate(-45deg) scale(0.7);
+  animation: changeColor 5s linear infinite;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.heart::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+@keyframes changeColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
