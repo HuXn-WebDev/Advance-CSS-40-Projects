@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #111;
+  font-family: "Playfair Display", serif;
+}
+
+.glitch {
+  position: absolute;
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+.glitch::before {
+  content: "HuXn";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.glitch:hover::before {
+  color: red;
+  z-index: -2;
+  animation: glitch 0.3s linear 6;
+}
+
+.glitch::after {
+  content: "HuXn";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.glitch:hover::before {
+  color: red;
+  z-index: -1;
+  animation: glitch 0.3s linear 6 reverse;
+}
+
+@keyframes glitch {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: -5px;
+    left: -5px;
+  }
+  40% {
+    top: 5px;
+    left: 5px;
+  }
+  60% {
+    top: -5px;
+    left: 5px;
+  }
+  80% {
+    top: 5px;
+    left: -5px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
