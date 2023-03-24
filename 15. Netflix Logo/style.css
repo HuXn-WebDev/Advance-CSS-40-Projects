@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 250px;
+}
+
+.container span {
+  position: absolute;
+  width: 50px;
+  height: 0;
+  background: #db0001;
+}
+
+.left-line {
+  left: 0;
+  bottom: 0;
+  animation: animate 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.center-line {
+  top: 0;
+  left: 0;
+  transform: skewX(22deg);
+  transform-origin: top left;
+  box-shadow: 0 0 50px #000;
+  animation: animate 1s linear forwards;
+  animation-delay: 2s;
+}
+
+.right-line {
+  right: 0;
+  bottom: 0;
+  animation: animate 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 20px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 5;
+  bottom: -10px;
+  left: -10%;
+}
+
+@keyframes animate {
+  100% {
+    height: 100%;
+  }
+}
