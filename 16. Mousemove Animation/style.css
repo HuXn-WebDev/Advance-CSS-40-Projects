@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #13000c;
+  overflow: hidden;
+  animation: anime 5s linear infinite;
+}
+
+.container span {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.container span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  box-shadow: 0 0 10px #dc1f4f, 0 0 20px #dc1f4f, 0 0 40px #dc1f4f,
+    0 0 60px #dc1f4f, 0 0 80px #dc1f4f, 0 0 100px #dc1f4f;
+  background: #dc1f4f;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 2s;
+}
+
+.container span:hover::before {
+  transform: scale(1);
+  transition: 0s;
+}
+
+@keyframes anime {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
