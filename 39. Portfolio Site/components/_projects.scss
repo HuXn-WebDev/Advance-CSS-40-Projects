@@ -1,0 +1,50 @@
+.projects {
+  .title {
+    margin-left: 50px;
+    margin-top: 8rem;
+    color: white;
+    font-size: 4rem;
+    font-family: $main-font;
+    font-weight: normal;
+    transform: translateY(-50px);
+
+    span {
+      background: $label-color;
+    }
+  }
+
+  .images-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 170px;
+    height: 100vh;
+    margin: 30px 10px;
+  }
+
+  .img-one {
+    transform: translateY(200px);
+  }
+  .img-two {
+    transform: translateY(150px);
+  }
+  .img-three {
+    transform: translateY(100px);
+  }
+
+  @media screen and (max-width: 680px) {
+    .img-one {
+      margin-bottom: 6rem;
+    }
+    .img-two {
+      margin-bottom: 6rem;
+    }
+    .img-three {
+      margin-bottom: 6rem;
+    }
+  }
+}

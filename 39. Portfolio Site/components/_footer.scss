@@ -1,0 +1,49 @@
+footer {
+  margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    max-width: 400px;
+    font-family: $primary-font;
+    line-height: 25px;
+  }
+
+  .about-company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-container {
+    margin-right: 40px;
+    margin-top: 20px;
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    p {
+      font-family: $primary-font;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    height: 80vh;
+    margin-top: 20rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    height: 140vh;
+    margin-top: 30rem;
+  }
+}

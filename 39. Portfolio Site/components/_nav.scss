@@ -1,0 +1,26 @@
+.container {
+  height: 50vh;
+  background: linear-gradient(to right, #4f2d62, #ac39ea);
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    font-family: $primary-font;
+
+    ul {
+      margin-right: 40px;
+      margin-top: 20px;
+
+      li {
+        display: inline;
+        list-style: none;
+        margin-left: 30px;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

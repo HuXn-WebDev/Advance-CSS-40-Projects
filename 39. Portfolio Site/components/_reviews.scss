@@ -1,0 +1,68 @@
+@import "variables";
+
+.clients {
+  height: 100vh;
+  margin-top: 15rem;
+
+  h1 {
+    text-align: right;
+    margin-right: 4rem;
+    margin-top: 8rem;
+    color: white;
+    font-size: 4rem;
+    font-family: Branden Raulner;
+    font-weight: normal;
+    transform: translateY(-50px);
+
+    span {
+      background: $label-color;
+    }
+  }
+
+  section.cards-container {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .card {
+        background: #2b252e;
+        padding: 40px;
+        color: #fff;
+        line-height: 1.5;
+        margin: 10px;
+
+        p {
+          width: 200px;
+          font-family: "Roboto", sans-serif;
+          color: rgb(197, 197, 197);
+        }
+
+        .user-info {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .user-img {
+            margin-right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background: url(Images/clients/alex-mccarthy-RGKdWJOUFH0-unsplash.jpg)
+              $bg-image-cover;
+          }
+
+          .user-img-two {
+            background: url(Images/clients/ali-morshedlou-WMD64tMfc4k-unsplash.jpg)
+              $bg-image-cover;
+          }
+          .user-img-three {
+            background: url(Images/clients/nasik-lababan-AY2dgFfdqVk-unsplash.jpg)
+              $bg-image-cover;
+          }
+        }
+      }
+    }
+  }
+}
