@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#fff0f0, #f6fdff);
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+
+  .icons i {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  ul li {
+    display: inline;
+    margin-left: 20px;
+    list-style: none;
+    a {
+      text-decoration: none;
+      font-family: sans-serif;
+      color: #181818;
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 6rem;
+}
+
+.image-container {
+  background: #fff;
+  border-radius: 200px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px -4px #ccc;
+
+  .image {
+    background: url(meysam-jarahkar-LI7jB1925j0-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 500px;
+    border-radius: 200px;
+  }
+}
+
+.content {
+  margin: 3rem 0;
+  font-family: sans-serif;
+
+  .badge-label {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  p.info {
+    width: 300px;
+    color: #4a4a4a;
+    line-height: 1.5;
+  }
+}
+
+.pills-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  .pill {
+    border: 2px solid white;
+    box-shadow: 4px 4px 10px -4px #ccc;
+
+    padding: 10px 20px;
+
+    border-radius: 100px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+.content2 {
+  text-align: right;
+
+  .info {
+    transform: translateX(20px);
+  }
+}
